@@ -6,9 +6,10 @@ public class App {
     public static void main(String[] args) throws Exception {
         imprimirPares();
         imprimirFatorial();
+        imprimirMultiplicacao();
     }
 
-    public static void imprimirPares() {
+    private static void imprimirPares() {
         int num = 2;
         while (num <= 10) {
             System.out.println(num);
@@ -16,7 +17,7 @@ public class App {
         }
     }
 
-    public static void imprimirFatorial() {
+    private static void imprimirFatorial() {
         Scanner sc = new Scanner(System.in);
         int fat = 1;
         System.out.print("Digite um valor para calcular o fatorial: ");
@@ -26,5 +27,19 @@ public class App {
             valor--;
         }
         System.out.println("O fatorial do valor inserido é " + fat);
+    }
+
+    private static void imprimirMultiplicacao() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Digite o primeiro valor: ");
+        int res = 0;
+        int val1 = sc.nextInt();
+        System.out.print("Digite o segundo valor: ");
+        int val2 = sc.nextInt();
+        while (val2 >= 1) {
+            res += val1;
+            val2--;
+        }
+        System.out.println("O resultado é " + res + ".");
     }
 }
