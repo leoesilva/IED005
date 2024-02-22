@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        imprimirPares();
-        imprimirFatorial();
-        imprimirMultiplicacao();
+        // imprimirPares();
+        // imprimirFatorial();
+        // imprimirMultiplicacao();
+        mediaVetor();
     }
 
     private static void imprimirPares() {
@@ -41,5 +42,34 @@ public class App {
             val2--;
         }
         System.out.println("O resultado é " + res + ".");
+    }
+
+    private static void mediaVetor() {
+        Double[] valores = new Double[5];
+        StringBuilder sb = new StringBuilder();
+        double total = 0, media = 0;
+        for (int i = 0; i < valores.length; i++) {
+            int max = 10;
+            int min = 0;
+            int range = max - min + 1;
+            valores[i] = (Math.random() * range) + min;
+            sb.append(valores[i] + "\t");
+        }
+
+        System.out.println("Valores: " + sb);
+        
+        for (Double valor : valores) {
+            total += valor;
+        }
+
+        media = total / valores.length;
+
+        System.out.println("Média: " + media);
+
+        for (Double valor : valores) {
+            if (valor > media) {
+                System.out.println(valor);
+            }
+        }
     }
 }
