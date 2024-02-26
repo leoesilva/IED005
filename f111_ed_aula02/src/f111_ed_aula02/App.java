@@ -53,7 +53,7 @@ public class App {
             int min = 0;
             int range = max - min + 1;
             valores[i] = (Math.random() * range) + min;
-            sb.append(valores[i] + "\t");
+            sb.append(String.format("%.2f", valores[i]) + "\t");
         }
 
         System.out.println("Valores: " + sb);
@@ -64,11 +64,11 @@ public class App {
 
         media = total / valores.length;
 
-        System.out.println("Média: " + media);
+        System.out.println("Média: " + String.format("%.2f", media));
 
         for (Double valor : valores) {
             if (valor > media) {
-                System.out.println(valor);
+                System.out.println(String.format("%.2f", valor));
             }
         }
     }
