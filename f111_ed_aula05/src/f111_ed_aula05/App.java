@@ -11,8 +11,8 @@ public class App {
     private static BufferedReader bufferedReader;
     private static FileWriter fileWriter;
     private static BufferedWriter bufferedWriter;
-    private static final String FILE_IN = "C:\\Users\\FATEC ZONA LESTE\\Desktop\\entrada.txt";
-    private static final String FILE_OUT = "C:\\Users\\FATEC ZONA LESTE\\Desktop\\saida.txt";
+    private static final String FILE_IN = "E:\\Documents\\Atividades\\IED005\\aula05\\entrada.txt";
+    private static final String FILE_OUT = "E:\\Documents\\Atividades\\IED005\\aula05\\saida.txt";
 
     public static void main(String[] args) {
         try {
@@ -29,7 +29,7 @@ public class App {
         // ex1Maiusculo();
         // ex2DataSubstring();
         // ex3DataSplit();
-        ex4RedeProteina();
+        // ex4RedeProteina();
     }
 
     private static void exemploLeitura() {
